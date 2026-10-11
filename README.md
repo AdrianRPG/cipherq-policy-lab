@@ -13,9 +13,9 @@ Built for the Qollab × IonQ Global Quantum Hackathon 2026.
 
 The classical evaluator and quantum rule compiler are connected through a Python entry point, one-job execution adapter and candidate reporting. Original and corrected policies have run end to end on Qollab's built-in and IonQ Aria 1 simulators. See `docs/INTEGRATION.md` for backend-specific evidence and remaining checks.
 
-The project remains a private Qollab draft; publication and submission are pending.
+The integrated project is publicly available on Qollab: [Run CipherQ Policy Lab](https://qollab.xyz/u/bmino/cipherq-policy-lab-2). Final hackathon submission is pending.
 
-## Planned experience
+## Project experience
 
 1. Select a small synthetic security scenario.
 2. Inspect the implemented access policy and the separate security requirement.
@@ -66,13 +66,22 @@ Responsibilities are flexible; coordinate shared changes before implementation.
 - [context.md](context.md): project scope, requirements and decisions.
 - [AGENTS.md](AGENTS.md): team and AI-assistant working agreement.
 - [workflows.md](workflows.md): implementation responsibilities and handoffs.
-- [docs/INTERFACE.md](docs/INTERFACE.md): proposed shared technical contract.
-
-Before implementation, the team must review and agree on the interface contract.
+- [docs/INTERFACE.md](docs/INTERFACE.md): shared v1 technical contract.
 
 ## Running the project
 
-For local execution (Python 3.10+):
+Run the following commands from the repository root with Python 3.10 or later.
+
+### Windows PowerShell
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install qiskit==2.5.2
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe main.py --scenario 0 --iterations 3 --shots 512
+```
+
+### macOS / Linux
 
 ```bash
 python3 -m venv .venv
@@ -84,9 +93,15 @@ python main.py --scenario 0 --iterations 3 --shots 512
 
 The local command uses BasicSimulator and writes `policy_lab_result.json` as saved experiment evidence. It does not submit an IonQ job.
 
-In Qollab, use root `main.py` and the `policy_lab/` folder. Keep the starter Qiskit requirement (`qiskit>=2.5.2,<3.0.0`, observed installation 2.5.2). Choose Code → Run Project → Run; the platform supplies the backend. See [integration instructions](docs/INTEGRATION.md) for scenario choices and result interpretation.
+### Qollab
 
-The submission must run on Qollab's built-in simulator and its IonQ simulator option. GitHub is the development repository, not a replacement for the Qollab submission.
+Open the [published project](https://qollab.xyz/u/bmino/cipherq-policy-lab-2), then choose Code → Run Project → Run.
+
+For the original policy, set Scenario Choice to 0, Iterations to 3, and Shots to 512. Select either the built-in simulator for ideal simulation or IonQ Aria 1 under Remotely Run Simulators for a noise-model simulation. Sign in if prompted.
+
+These options run simulations, not physical quantum hardware. See [integration instructions](docs/INTEGRATION.md) for other scenario choices and result interpretation.
+
+To package the project in Qollab, include root `main.py` and the `policy_lab/` folder. The documented Qiskit requirement is `qiskit>=2.5.2,<3.0.0`; the tested version is 2.5.2. Qollab supplies the selected backend.
 
 ## Classical evaluator
 
@@ -128,6 +143,6 @@ Describe what changed, what was tested, and any remaining limitations. Keep shar
 
 Project code and documentation are released under the [MIT License](LICENSE).
 
-External sources and reused material will be recorded in `docs/SOURCES.md` as development proceeds.
+External sources and AI assistance are documented in [docs/SOURCES.md](docs/SOURCES.md).
 
 This effort is supported by Qollab & IonQ
