@@ -218,3 +218,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local execution evidence (save deliberately under docs/experiments when needed)
+/policy_lab_result.json

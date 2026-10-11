@@ -1,0 +1,22 @@
+{
+  "result_kind": "saved_experiment",
+  "source": "Qollab console observed during this session; transcribed, not a console download",
+  "project_url": "https://qollab.xyz/u/bmino/cipherq-policy-lab-2",
+  "selected_backend": "Built-in simulator (24q)",
+  "backend": "basic_simulator",
+  "python": "3.14.2",
+  "qiskit": "2.5.2",
+  "numpy": "2.4.6",
+  "qiskit_ionq_distribution_metadata": "unavailable",
+  "companion_import": "policy-lab-companion-import-ok",
+  "total_qubits": 2,
+  "shots_requested": 128,
+  "superposition": false,
+  "raw_counts": {"01": 128},
+  "canonical_order": ["q0", "q1"],
+  "canonical_counts": {"10": 128},
+  "shots_observed": 128,
+  "ideal_support_only": true,
+  "ui_duration_seconds": 1.5,
+  "scope": "Synthetic integration fixture; not a policy oracle or performance benchmark"
+}

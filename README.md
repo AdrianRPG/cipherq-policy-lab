@@ -11,9 +11,9 @@ Built for the Qollab × IonQ Global Quantum Hackathon 2026.
 
 ## Current status
 
-Project setup and shared documentation are in progress.
+The classical evaluator and quantum rule compiler are connected through a Python entry point, one-job execution adapter and candidate reporting. Original and corrected policies have run end to end on Qollab's built-in and IonQ Aria 1 simulators. See `docs/INTEGRATION.md` for backend-specific evidence and remaining checks.
 
-Application functionality, dependency versions and Qollab/IonQ execution have not yet been verified. The features below describe the planned implementation.
+The project remains a private Qollab draft; publication and submission are pending.
 
 ## Planned experience
 
@@ -72,7 +72,19 @@ Before implementation, the team must review and agree on the interface contract.
 
 ## Running the project
 
-Verified installation and execution instructions will be added after the first working integration.
+For local execution (Python 3.10+):
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install qiskit==2.5.2
+python -m unittest discover -s tests -v
+python main.py --scenario 0 --iterations 3 --shots 512
+```
+
+The local command uses BasicSimulator and writes `policy_lab_result.json` as saved experiment evidence. It does not submit an IonQ job.
+
+In Qollab, use root `main.py` and the `policy_lab/` folder. Keep the starter Qiskit requirement (`qiskit>=2.5.2,<3.0.0`, observed installation 2.5.2). Choose Code → Run Project → Run; the platform supplies the backend. See [integration instructions](docs/INTEGRATION.md) for scenario choices and result interpretation.
 
 The submission must run on Qollab's built-in simulator and its IonQ simulator option. GitHub is the development repository, not a replacement for the Qollab submission.
 
@@ -118,4 +130,4 @@ Project code and documentation are released under the [MIT License](LICENSE).
 
 External sources and reused material will be recorded in `docs/SOURCES.md` as development proceeds.
 
-This effort is supported by Qoll
+This effort is supported by Qollab & IonQ
