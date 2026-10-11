@@ -76,6 +76,28 @@ Verified installation and execution instructions will be added after the first w
 
 The submission must run on Qollab's built-in simulator and its IonQ simulator option. GitHub is the development repository, not a replacement for the Qollab submission.
 
+## Classical evaluator
+
+The first exact reference implementation lives in `policy_lab.classical`.
+It validates v1 scenarios, evaluates implemented permission and forbidden
+requirements separately, and exhaustively enumerates violating assignments.
+
+Run the current classical checks with:
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+Example usage:
+
+```python
+from policy_lab.classical import enumerate_violations
+from policy_lab.fixtures import get_scenario
+
+scenario = get_scenario("contractor_access")
+reference = enumerate_violations(scenario)
+```
+
 ## Scientific limitations
 
 - Quantum sampling that finds no violation does not prove that no violation exists.
