@@ -10,4 +10,9 @@
 
 - Adrian's quantum compiler and Piero's classical evaluator are preserved from repository commit `7f31db2` (merged teammate PRs #2 and #3). Codex assisted Boris with the execution adapter, candidate reporting, Qollab entry point, tests, packaging and verification.
 - [Qiskit-IonQ submission documentation](https://qiskit-community.github.io/qiskit-ionq/guides/usage.html), consulted for supported QIS gates. Integration lowers circuits to `rx`, `ry`, `rz`, `cx` plus measurements; actual Qollab verification is recorded separately from this documentation.
-- The integrated application was run on the original, corrected and asymmetric fixtures on both Qollab's built-in simulator and its IonQ Aria 1 noise-model simulator. Codex saved rendered console reports, rechecked all six with the classical evaluator, and added draft project instructions. Twenty-three local tests passed. Details and limitations are in `docs/INTEGRATION.md`; the Qollab draft has not been published.
+- The integrated application was run on the original, corrected and asymmetric fixtures on both Qollab's built-in simulator and its IonQ Aria 1 noise-model simulator. Codex saved rendered console reports, rechecked all six with the classical evaluator, and added draft project instructions. Twenty-three local tests passed. Details and limitations are in `docs/INTEGRATION.md`. The integrated project is now publicly available on Qollab: [CipherQ Policy Lab, v1.0-integrated](https://qollab.xyz/u/bmino/cipherq-policy-lab-2).
+
+## Quantum implementation and project documentation
+
+- OpenAI's assistant assisted Adrian with project planning, shared documentation, and code and explanations for the reversible conjunction and OR helpers, policy phase oracle, Grover diffuser, search circuit builder, and associated quantum tests.
+- Adrian entered and ran the code locally, executed the tests, and independently ran the published application on Qollab's built-in simulator and IonQ Aria 1 noise-model simulator.
