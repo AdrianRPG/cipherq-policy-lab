@@ -1,0 +1,17 @@
+{
+  "result_kind": "saved_experiment",
+  "source": "Transcribed from observed Qollab console after page reload",
+  "project_url": "https://qollab.xyz/u/bmino/cipherq-policy-lab-2",
+  "selected_backend": "Built-in simulator (24q)",
+  "backend": "basic_simulator",
+  "total_qubits": 2,
+  "shots_requested": 128,
+  "superposition": true,
+  "raw_counts": {"01": 68, "11": 60},
+  "canonical_order": ["q0", "q1"],
+  "canonical_counts": {"10": 68, "11": 60},
+  "shots_observed": 128,
+  "ideal_support_only": true,
+  "ui_duration_seconds": 1.6,
+  "scope": "Synthetic integration fixture; observed frequencies, not exact probabilities"
+}

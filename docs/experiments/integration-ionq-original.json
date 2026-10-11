@@ -1,0 +1,314 @@
+{
+  "result_kind": "saved_experiment",
+  "scenario": {
+    "schema_version": "1.0",
+    "id": "contractor_access",
+    "attributes": [
+      "C",
+      "R",
+      "D",
+      "M"
+    ],
+    "allow_any": [
+      [
+        "R",
+        "D",
+        "M"
+      ]
+    ],
+    "forbid_any": [
+      [
+        "C"
+      ]
+    ]
+  },
+  "classical_reference": {
+    "scenario_id": "contractor_access",
+    "attribute_order": [
+      "C",
+      "R",
+      "D",
+      "M"
+    ],
+    "total_assignments": 16,
+    "violation_count": 1,
+    "violating_assignments": [
+      {
+        "C": true,
+        "R": true,
+        "D": true,
+        "M": true
+      }
+    ]
+  },
+  "execution": {
+    "scenario_id": "contractor_access",
+    "attribute_order": [
+      "C",
+      "R",
+      "D",
+      "M"
+    ],
+    "iterations": 3,
+    "shots_requested": 512,
+    "shots_observed": 512,
+    "backend": "ionq_simulator",
+    "counts": {
+      "1000": 31,
+      "1001": 24,
+      "1010": 39,
+      "1011": 30,
+      "1100": 24,
+      "1101": 28,
+      "1110": 46,
+      "1111": 116,
+      "0000": 19,
+      "0100": 20,
+      "0010": 24,
+      "0110": 26,
+      "0001": 12,
+      "0101": 23,
+      "0011": 25,
+      "0111": 25
+    }
+  },
+  "candidates": [
+    {
+      "bits": "0000",
+      "assignment": {
+        "C": false,
+        "R": false,
+        "D": false,
+        "M": false
+      },
+      "count": 19,
+      "allowed": false,
+      "forbidden": false,
+      "violation": false,
+      "explanation": "0000 is not a violation because access and prohibition are not both true."
+    },
+    {
+      "bits": "0001",
+      "assignment": {
+        "C": false,
+        "R": false,
+        "D": false,
+        "M": true
+      },
+      "count": 12,
+      "allowed": false,
+      "forbidden": false,
+      "violation": false,
+      "explanation": "0001 is not a violation because access and prohibition are not both true."
+    },
+    {
+      "bits": "0010",
+      "assignment": {
+        "C": false,
+        "R": false,
+        "D": true,
+        "M": false
+      },
+      "count": 24,
+      "allowed": false,
+      "forbidden": false,
+      "violation": false,
+      "explanation": "0010 is not a violation because access and prohibition are not both true."
+    },
+    {
+      "bits": "0011",
+      "assignment": {
+        "C": false,
+        "R": false,
+        "D": true,
+        "M": true
+      },
+      "count": 25,
+      "allowed": false,
+      "forbidden": false,
+      "violation": false,
+      "explanation": "0011 is not a violation because access and prohibition are not both true."
+    },
+    {
+      "bits": "0100",
+      "assignment": {
+        "C": false,
+        "R": true,
+        "D": false,
+        "M": false
+      },
+      "count": 20,
+      "allowed": false,
+      "forbidden": false,
+      "violation": false,
+      "explanation": "0100 is not a violation because access and prohibition are not both true."
+    },
+    {
+      "bits": "0101",
+      "assignment": {
+        "C": false,
+        "R": true,
+        "D": false,
+        "M": true
+      },
+      "count": 23,
+      "allowed": false,
+      "forbidden": false,
+      "violation": false,
+      "explanation": "0101 is not a violation because access and prohibition are not both true."
+    },
+    {
+      "bits": "0110",
+      "assignment": {
+        "C": false,
+        "R": true,
+        "D": true,
+        "M": false
+      },
+      "count": 26,
+      "allowed": false,
+      "forbidden": false,
+      "violation": false,
+      "explanation": "0110 is not a violation because access and prohibition are not both true."
+    },
+    {
+      "bits": "0111",
+      "assignment": {
+        "C": false,
+        "R": true,
+        "D": true,
+        "M": true
+      },
+      "count": 25,
+      "allowed": true,
+      "forbidden": false,
+      "violation": false,
+      "explanation": "0111 is not a violation because access and prohibition are not both true."
+    },
+    {
+      "bits": "1000",
+      "assignment": {
+        "C": true,
+        "R": false,
+        "D": false,
+        "M": false
+      },
+      "count": 31,
+      "allowed": false,
+      "forbidden": true,
+      "violation": false,
+      "explanation": "1000 is not a violation because access and prohibition are not both true."
+    },
+    {
+      "bits": "1001",
+      "assignment": {
+        "C": true,
+        "R": false,
+        "D": false,
+        "M": true
+      },
+      "count": 24,
+      "allowed": false,
+      "forbidden": true,
+      "violation": false,
+      "explanation": "1001 is not a violation because access and prohibition are not both true."
+    },
+    {
+      "bits": "1010",
+      "assignment": {
+        "C": true,
+        "R": false,
+        "D": true,
+        "M": false
+      },
+      "count": 39,
+      "allowed": false,
+      "forbidden": true,
+      "violation": false,
+      "explanation": "1010 is not a violation because access and prohibition are not both true."
+    },
+    {
+      "bits": "1011",
+      "assignment": {
+        "C": true,
+        "R": false,
+        "D": true,
+        "M": true
+      },
+      "count": 30,
+      "allowed": false,
+      "forbidden": true,
+      "violation": false,
+      "explanation": "1011 is not a violation because access and prohibition are not both true."
+    },
+    {
+      "bits": "1100",
+      "assignment": {
+        "C": true,
+        "R": true,
+        "D": false,
+        "M": false
+      },
+      "count": 24,
+      "allowed": false,
+      "forbidden": true,
+      "violation": false,
+      "explanation": "1100 is not a violation because access and prohibition are not both true."
+    },
+    {
+      "bits": "1101",
+      "assignment": {
+        "C": true,
+        "R": true,
+        "D": false,
+        "M": true
+      },
+      "count": 28,
+      "allowed": false,
+      "forbidden": true,
+      "violation": false,
+      "explanation": "1101 is not a violation because access and prohibition are not both true."
+    },
+    {
+      "bits": "1110",
+      "assignment": {
+        "C": true,
+        "R": true,
+        "D": true,
+        "M": false
+      },
+      "count": 46,
+      "allowed": false,
+      "forbidden": true,
+      "violation": false,
+      "explanation": "1110 is not a violation because access and prohibition are not both true."
+    },
+    {
+      "bits": "1111",
+      "assignment": {
+        "C": true,
+        "R": true,
+        "D": true,
+        "M": true
+      },
+      "count": 116,
+      "allowed": true,
+      "forbidden": true,
+      "violation": true,
+      "explanation": "1111 is a violation: the implemented policy allows access and the security requirement forbids it. True attributes: C, R, D, M."
+    }
+  ],
+  "observed_violation_proportion": 0.2265625,
+  "uniform_reference_probability": 0.0625,
+  "conclusion": "Classically verified sampled violations: 116 / 512 shots.",
+  "total_qubits": 7,
+  "iteration_selection": "Fixed/user-selected; default 3 reflects known one-of-16 teaching fixture.",
+  "runtime": {
+    "python": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+    "qiskit": "2.5.2",
+    "numpy": "2.4.6",
+    "qiskit-ionq": "1.0.2"
+  },
+  "evidence_source": "Qollab rendered console JSON",
+  "selected_backend_ui": "IonQ Aria 1 (25q) \u2014 Noise model, Free"
+}

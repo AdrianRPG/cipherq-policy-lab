@@ -1,0 +1,17 @@
+{
+  "result_kind": "saved_experiment",
+  "source": "Transcribed from observed Qollab console",
+  "project_url": "https://qollab.xyz/u/bmino/cipherq-policy-lab-2",
+  "selected_backend": "IonQ Aria 1 (25q) Noise model Free",
+  "backend": "ionq_simulator",
+  "total_qubits": 2,
+  "shots_requested": 128,
+  "superposition": true,
+  "raw_counts": {"01": 55, "11": 73},
+  "canonical_order": ["q0", "q1"],
+  "canonical_counts": {"10": 55, "11": 73},
+  "shots_observed": 128,
+  "ideal_support_only": true,
+  "ui_duration_seconds": 13.5,
+  "scope": "Synthetic integration fixture; observed frequencies, not exact probabilities"
+}
